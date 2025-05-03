@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,9 +15,9 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new Transla
 
 @NgModule({
     declarations: [AppComponent],
-    bootstrap: [AppComponent],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         TranslateModule.forRoot({
             loader: {
@@ -27,6 +27,7 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new Transla
             }
         })
     ],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
