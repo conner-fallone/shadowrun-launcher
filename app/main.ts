@@ -12,14 +12,16 @@ function createWindow(): BrowserWindow {
 
     // Create the browser window.
     win = new BrowserWindow({
+        autoHideMenuBar: true,
+        icon: './src/assets/icons/shadowrun.ico',
         x: 0,
         y: 0,
-        width: size.width,
-        height: size.height,
+        width: 1200,
+        height: 800,
         webPreferences: {
             nodeIntegration: true,
             allowRunningInsecureContent: (serve),
-            contextIsolation: false,
+            contextIsolation: false
         },
     });
 
