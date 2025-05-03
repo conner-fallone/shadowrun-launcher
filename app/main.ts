@@ -23,6 +23,7 @@ function createWindow(): BrowserWindow {
             allowRunningInsecureContent: (serve),
             contextIsolation: false
         },
+        resizable: false
     });
 
     if (serve) {

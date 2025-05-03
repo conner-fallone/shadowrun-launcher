@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+button {
+    background-color: #322e6b;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+    font-size: 24px;
+    border: 1px solid gray;
+    text-align: left;
+}

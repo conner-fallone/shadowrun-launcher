@@ -18,6 +18,8 @@ body {
 
     // Styles every route component
     &>*:last-child {
-		
+		position: fixed;
+        top: 200px;
+        left: 50px;
 	}
 }
