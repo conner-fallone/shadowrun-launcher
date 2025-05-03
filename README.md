@@ -25,7 +25,6 @@ With this sample, you can:
 
 - Run your app in a local development environment with Electron & Hot reload
 - Run your app in a production environment
-- Execute your tests with Jest and Playwright (E2E)
 - Package your app into an executable file for Linux, Windows & Mac
 
 /!\ Hot reload only pertains to the renderer process. The main electron process is not able to be hot reloaded, only restarted.
@@ -119,17 +118,6 @@ Maybe you only want to execute the application in the browser with hot reload? J
 YES! You can do it! Just by importing your library in npm dependencies section of `app/package.json` with `npm install --save XXXXX`. \
 It will be loaded by electron during build phase and added to your final bundle. \
 Then use your library by importing it in `app/main.ts` file. Quite simple, isn't it?
-
-## E2E Testing
-
-E2E Test scripts can be found in `e2e` folder.
-
-| Command       | Description               |
-|---------------|---------------------------|
-| `npm run e2e` | Execute end to end tests  |
-
-Note: To make it work behind a proxy, you can add this proxy exception in your terminal  
-`export {no_proxy,NO_PROXY}="127.0.0.1,localhost"`
 
 ## Debug with VsCode
 
